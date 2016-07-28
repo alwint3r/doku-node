@@ -1,0 +1,19 @@
+{
+  "name": "dokupayment",
+  "version": "1.0.0",
+  "description": "DOKU integration helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "doku",
+    "integration",
+    "payment"
+  ],
+  "author": "Alwin Arrasyid <alwin.ridd@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "^2.1.0"
+  }
+}
