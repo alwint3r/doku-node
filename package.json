@@ -15,5 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "superagent": "^2.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }
