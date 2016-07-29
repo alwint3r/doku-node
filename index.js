@@ -17,5 +17,6 @@ module.exports = function Factory(config) {
 
     return {
         words: require('./src/words')(context),
+        formatBasket: require('./src/format_basket'),
     };
 };

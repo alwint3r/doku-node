@@ -31,9 +31,9 @@ describe('Factory(config)', function() {
             sharedKey: 'oneSharedKey',
         });
 
-        expect(doku.words).to.be.an.object;
-        expect(doku.words.raw).to.be.a.function;
-        expect(doku.words.hashed).to.be.a.function;
+        expect(doku.words).to.be.an('object');
+        expect(doku.words.raw).to.be.a('function');
+        expect(doku.words.hashed).to.be.a('function');
     });
 
     it('Should have formatBasket function', function() {
@@ -42,6 +42,6 @@ describe('Factory(config)', function() {
             sharedKey: 'oneSharedKey',
         });
 
-        expect(doku.formatBasket).to.be.a.function;
+        expect(doku.formatBasket).to.be.a('function');
     });
 });
