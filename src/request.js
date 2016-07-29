@@ -28,7 +28,7 @@ function makeRequest(url, data, done) {
                 error.status = 500;
                 error.code = body.res_response_code;
 
-                return done(error);
+                return done(error, body);
             }
 
             return done(null, body);
