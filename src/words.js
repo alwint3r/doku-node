@@ -6,7 +6,7 @@ function preGenerate(context, data) {
     return [
         data.amount,
         context.mallId,
-        context.sharedkey,
+        context.sharedKey,
         data.invoice,
     ];
 }
