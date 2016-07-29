@@ -10,7 +10,29 @@ function makeRequest(url, data, done) {
         .send({ data: JSON.stringify(data) })
         .set('Accept', 'application/json')
         .redirects(5)
-        .end(done);
+        .end(function(err, response) {
+            if (err) {
+                return done(err);
+            }
+
+            var body = response.text;
+
+            try {
+                body = JSON.parse(response.text);
+            } catch (ex) {
+
+            }
+
+            if (body.res_response_code !== '0000') {
+                var error = new Error(body.res_response_msg);
+                error.status = 500;
+                error.code = body.res_response_code;
+
+                return done(error);
+            }
+
+            return done(null, body);
+        });
 };
 
 module.exports = function RequesterFactory(context) {
