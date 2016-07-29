@@ -44,4 +44,18 @@ describe('Factory(config)', function() {
 
         expect(doku.formatBasket).to.be.a('function');
     });
+
+    it('Should have payment object', function() {
+        var doku = Doku({
+            mallId: 'oneMallId',
+            sharedKey: 'oneSharedKey',
+        });
+
+        expect(doku.payment).to.be.an('object');
+
+        Object.keys(doku.payment).forEach(function(fn) {
+            expect(doku.payment[fn]).to.be.a('function');
+        });
+    });
+
 });
