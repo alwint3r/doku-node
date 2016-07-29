@@ -1,6 +1,6 @@
 {
   "name": "dokupayment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "DOKU integration helper",
   "main": "index.js",
   "scripts": {
