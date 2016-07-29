@@ -15,7 +15,7 @@ var opts = {
     sharedKey: 'oneSharedKey',
 };
 
-var Doku = require('doku-library')(opts);
+var Doku = require('dokupayment')(opts);
 ```
 
 ## APIs
